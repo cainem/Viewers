@@ -3,6 +3,9 @@
         <h2>Logical stream viewer</h2>
     </div>
     <div class="row">
-        <jsInput></jsInput>    
+        <jsInput [(json)]="myJson"></jsInput>
+    </div>
+    <div class="row">
+        <span>{{myJson.unparsedJson}}</span>
     </div>
 </div>
