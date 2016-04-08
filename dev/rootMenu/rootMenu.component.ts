@@ -3,11 +3,12 @@ import {ROUTER_DIRECTIVES} from "angular2/router";
 import {RouteConfig} from "angular2/router"
 import {ViewLogicalStream} from "../viewLogicalStream/viewLogicalStream.component";
 import {ViewMachine} from "../viewMachine/viewMachine.component";
+import {CytoscapeComponent} from "../cytoscape/cytoscape.component"
 
 @Component({
     selector: 'rootMenu',
     templateUrl: './app/rootMenu/rootMenu.html',
-    directives: [ViewLogicalStream, ViewMachine, ROUTER_DIRECTIVES]
+    directives: [ViewLogicalStream, ViewMachine, ROUTER_DIRECTIVES, CytoscapeComponent]
 })
 @RouteConfig([
     { path: '/viewLogicalStream/', name: 'ViewLogicalStream', component: ViewLogicalStream, useAsDefault: true },
