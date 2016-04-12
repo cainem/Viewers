@@ -82,7 +82,7 @@ export class CytoscapeComponent implements AfterViewInit {
                 ]
             },
             ready: function() {
-                var i = 1;
+                //this.resize();
             }
         });
 
