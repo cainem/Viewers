@@ -15,6 +15,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var precss = require('precss');
 var cssnano = require('cssnano');
+var tslint = require('gulp-tslint');
+var mocha = require("gulp-mocha");
+var istanbul = require("gulp-istanbul");
 
 /* JS & TS */
 var jsuglify = require('gulp-uglify');
@@ -60,6 +63,41 @@ gulp.task('watch', function () {
     gulp.watch(appDev + '**/*.ts', ['build-ts']);
     gulp.watch(assetsDev + 'scss/**/*.scss', ['build-css']);
     gulp.watch(assetsDev + 'img/*', ['build-img']);
+});
+
+gulp.task("lint", function() {
+    return gulp.src([
+        "dev/**/**.ts",
+        "test/**/**.test.ts"
+    ])
+    .pipe(tslint({ }))
+    .pipe(tslint.report("verbose"));
+});
+
+var tsTestProject = typescript.createProject("tsconfig.json");
+
+gulp.task("build-test", function() {
+    return gulp.src([
+            "test/**/*.ts",
+            "typings/main.d.ts/",
+            "dev/interfaces/interfaces.d.ts"
+        ])
+        .pipe(tsc(tsTestProject))
+        .js.pipe(gulp.dest("test/"));
+});
+
+gulp.task("istanbul:hook", function() {
+    return gulp.src(['apps/**/*.js'])
+        // Covering files
+        .pipe(istanbul())
+        // Force `require` to return covered files
+        .pipe(istanbul.hookRequire());
+});
+
+gulp.task("test", ["istanbul:hook"], function() {
+    return gulp.src('test/**/*.test.js')
+        .pipe(mocha({ui: 'bdd'}))
+        .pipe(istanbul.writeReports());
 });
 
 gulp.task('default', ['watch', 'build-ts', 'build-css', 'build-html']);

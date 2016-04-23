@@ -1,22 +1,12 @@
 import {Component} from 'angular2/core';
 import {JsInputComponent} from '../jsInput/jsInput.component'
 import {WrappedJson} from '../wrappedJson'
+import {LogicalReaderReturnComponent} from '../viewElements/logicalReaderReturn/logicalReaderReturn.component';
+import {ViewOfJson} from '../data/viewOfJson'
 
 @Component({
-    templateUrl: './app/viewLogicalStream/viewLogicalStream.html',
-    directives: [JsInputComponent]
+    templateUrl: './dev/viewLogicalStream/viewLogicalStream.html',
+    directives: [LogicalReaderReturnComponent],
 })
-export class ViewLogicalStream {
-    private _myJson : WrappedJson;
-    get myJson(): WrappedJson {
-        return this._myJson;
-    }
-    set myJson(value : WrappedJson) {
-        this._myJson = value;
-    }
-    
-    constructor() {
-        this.myJson = new WrappedJson();
-    }
-    
+export class ViewLogicalStream {        
 }
