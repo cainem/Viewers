@@ -2,6 +2,6 @@ import {ChromosomePositionDto} from "./chromosomePositionDto"
 
 export interface GenomePositionDto
 {
-    ChromosomePositionInGenome : number;
-    ChromosomePosition : ChromosomePositionDto;
+    chromosomePositionInGenome : number;
+    chromosomePosition : ChromosomePositionDto;
 }

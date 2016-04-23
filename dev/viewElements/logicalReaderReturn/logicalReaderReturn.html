@@ -1,11 +1,11 @@
 <div class="container-fluid">
-    <h1>Elements</h1>
-    <ul *ngFor="#t of viewOfJson.json">
-        <li *ngIf="t.Type == 'LogicalNodeComponent'">
-            <logicalNode></logicalNode>
-        </li>
-        <li *ngIf="t.Type == 'LogicalConnectionComponent'">
-            <logicalConnection></logicalConnection>
-        </li>
-    </ul>
+    <h1>{{model.typeOfLogicalBuildingUnit}}</h1>
+        <div *ngIf="model.typeOfLogicalBuildingUnit == 'LogicalNode'">
+            Node
+            <!--<logicalNode></logicalNode>-->
+        </div>
+        <div *ngIf="model.typeOfLogicalBuildingUnit == 'LogicalConnection'">
+            Connection
+            <!--<logicalConnection></logicalConnection>-->
+        </div>
 </div>

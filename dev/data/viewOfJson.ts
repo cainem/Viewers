@@ -4,13 +4,11 @@ import {LogicalReaderReturnComponent} from '../viewElements/logicalReaderReturn/
 export class ViewOfJson {
     contructor() {
     }
-    
-	
+    	
 	get viewModel() : LogicalReaderReturnComponent[] {
 		return null;
 	}
-	
-	
+		
     get json(): ILogicalReaderReturn[] {
         return [{
 	"typeOfLogicalBuildingUnit": "LogicalNode",

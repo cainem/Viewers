@@ -3,12 +3,11 @@
         <h2>Logical stream viewer</h2>
     </div>
     <div>
-        <logicalReaderReturn></logicalReaderReturn>
+        <!--<ul *ngFor="#t of json">
+            <li>
+                <logicalReaderReturn [model]=t></logicalReaderReturn>
+            </li>
+        </ul>-->
+        <logicalReaderReturn *ngFor="#t of json" [model]="t"></logicalReaderReturn>
     </div>
-    <!--<div class="row">
-        <jsInput [(json)]="myJson"></jsInput>
-    </div>
-    <div class="row">
-        <span>{{myJson.unparsedJson}}</span>
-    </div>-->
 </div>

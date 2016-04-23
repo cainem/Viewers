@@ -25,7 +25,6 @@ export class LogicalNodeComponent implements LogicalNodeDto {
             var i = <LogicalNodeDto>this;
             i.isSynchronising = data.isSynchronising;
             i.Key = data.Key;
-            i.
         }
     }
     

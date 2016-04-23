@@ -1,5 +1,5 @@
 export interface GenePairPositionDto
 {
-    IsMother : boolean;
-    GenePosition : number;
+    isMother : boolean;
+    genePosition : number;
 }
