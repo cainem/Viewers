@@ -6,5 +6,5 @@ export interface LogicalNodeDto {
     logicalNodeFunctions : LogicalNodeFunctionDto[];
     logicalImplicitConnectionSettings : LogicalImplicitConnectionSettingsDto;
     isSynchronising : boolean;
-    Key : WoollyKeyDto 
+    key : WoollyKeyDto 
 }

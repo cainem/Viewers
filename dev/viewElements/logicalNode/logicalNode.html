@@ -1,1 +1,17 @@
-<div>Logical node</div>
+<div class="row node">
+    <div class="container-fluid">
+        <div class="row">
+            <h4 class="bg-primary">Logical node</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-3"><strong>Is synchronising</strong></div>
+            <div class="col-lg-9">{{model.isSynchronising}}</div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <woollyKey [model]="model.key"></woollyKey>
+    </div>
+    <div class="container-fluid">
+        <logicalNodeFunction *ngFor="#t of model.logicalNodeFunctions" [model]="t"></logicalNodeFunction>
+    </div>
+</div>

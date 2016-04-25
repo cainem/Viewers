@@ -9,7 +9,8 @@ import {ILogicalReaderReturn} from '../../data/logicalBuildingUnitDisplay/logica
     selector: 'logicalReaderReturn',
     templateUrl: './dev/viewElements/logicalReaderReturn/logicalReaderReturn.html',
     directives: [LogicalNodeComponent, LogicalConnectionComponent],
-    providers : []
+    providers : [],
+    styleUrls: ['./dev/viewElements/logicalReaderReturn/logicalReaderReturn.css']
     
 })
 export class LogicalReaderReturnComponent {

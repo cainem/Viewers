@@ -1,11 +1,9 @@
 <div class="container-fluid">
-    <h1>{{model.typeOfLogicalBuildingUnit}}</h1>
-        <div *ngIf="model.typeOfLogicalBuildingUnit == 'LogicalNode'">
-            Node
-            <!--<logicalNode></logicalNode>-->
-        </div>
-        <div *ngIf="model.typeOfLogicalBuildingUnit == 'LogicalConnection'">
-            Connection
-            <!--<logicalConnection></logicalConnection>-->
-        </div>
+    <div class="row" *ngIf="model.typeOfLogicalBuildingUnit == 'LogicalNode'">
+        <logicalNode [model]="model.logicalBuildingUnit"></logicalNode>
+    </div>
+    <div class="row" *ngIf="model.typeOfLogicalBuildingUnit == 'LogicalConnection'">
+        Connection
+        <!--<logicalConnection></logicalConnection>-->
+    </div>
 </div>
