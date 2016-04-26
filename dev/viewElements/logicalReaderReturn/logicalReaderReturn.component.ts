@@ -8,7 +8,7 @@ import {ILogicalReaderReturn} from '../../data/logicalBuildingUnitDisplay/logica
 @Component({
     selector: 'logicalReaderReturn',
     templateUrl: './dev/viewElements/logicalReaderReturn/logicalReaderReturn.html',
-    directives: [LogicalNodeComponent, LogicalConnectionComponent],
+    directives: [LogicalNodeComponent, LogicalConnectionComponent, GenomePositionComponent],
     providers : [],
     styleUrls: ['./dev/viewElements/logicalReaderReturn/logicalReaderReturn.css']
     

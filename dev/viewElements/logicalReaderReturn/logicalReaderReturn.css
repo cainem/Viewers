@@ -1,3 +1,9 @@
-div.row {
-    padding-bottom: 5px
+div.logicalReaderReturn {
+    border-color: sandybrown;
+    border-style: solid;    
+    background-color: papayawhip;
+    margin-bottom: 20px;
+}
+div.container-fluid {
+    padding-bottom: 2px;
 }
