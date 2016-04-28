@@ -4,11 +4,12 @@ import {LogicalNodeFunctionDto} from '../../data/logicalBuildingUnitDisplay/logi
 import {LogicalImplicitConnectionSettingsDto} from '../../data/logicalBuildingUnitDisplay/logicalImplicitConnectionSettingsDto';
 import {WoollyKey} from '../woollyKey/woollyKey.component';
 import {LogicalNodeFunctionComponent} from '../logicalNodeFunction/logicalNodeFunction.component';
+import {Collapse} from '../../sharedControls/collapsibleDiv/collapsibleDiv.component';
 
 @Component({
     selector: 'logicalNode',
     templateUrl: './dev/viewElements/logicalNode/logicalNode.html',
-    directives: [WoollyKey, LogicalNodeFunctionComponent],
+    directives: [WoollyKey, LogicalNodeFunctionComponent, Collapse],
     styleUrls: ['./dev/viewElements/logicalNode/logicalNode.css']
 })
 export class LogicalNodeComponent {    

@@ -24,7 +24,7 @@ export class ViewOfJson {
 	"nextGenomePosition": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 2
@@ -34,7 +34,7 @@ export class ViewOfJson {
 	"currentPositionInGenome": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 1
@@ -57,7 +57,7 @@ export class ViewOfJson {
 	"nextGenomePosition": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 3
@@ -67,7 +67,7 @@ export class ViewOfJson {
 	"currentPositionInGenome": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 2
@@ -92,7 +92,7 @@ export class ViewOfJson {
 	"nextGenomePosition": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 4
@@ -102,7 +102,7 @@ export class ViewOfJson {
 	"currentPositionInGenome": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 3
@@ -128,7 +128,7 @@ export class ViewOfJson {
 	"nextGenomePosition": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 6
@@ -138,7 +138,7 @@ export class ViewOfJson {
 	"currentPositionInGenome": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 5
@@ -164,7 +164,7 @@ export class ViewOfJson {
 	"currentPositionInGenome": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positonInChromosome": 0,
+			"positionInChromosome": 0,
 			"genePairPosition": {
 				"isMother": true,
 				"genePosition": 6
