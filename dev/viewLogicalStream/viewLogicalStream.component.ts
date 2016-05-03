@@ -1,17 +1,18 @@
 import {Component} from 'angular2/core';
 import {JsInputComponent} from '../jsInput/jsInput.component'
 import {WrappedJson} from '../wrappedJson'
-import {LogicalReaderReturnComponent} from '../viewElements/logicalReaderReturn/logicalReaderReturn.component';
-import {ViewOfJson} from '../data/viewOfJson'
+import {ChromosomeComponent} from '../viewElements/chromosome/chromosome.component';
+import {ViewOfJson} from '../data/logicalBuildingUnitDisplay/viewOfJson'
 import {ILogicalReaderReturn} from '../data/logicalBuildingUnitDisplay/logicalReaderReturnDto';
+import {Chromosome} from '../data/logicalBuildingUnitDisplay/chromosome';
 
 @Component({
     templateUrl: './dev/viewLogicalStream/viewLogicalStream.html',
-    directives: [LogicalReaderReturnComponent],
+    directives: [ChromosomeComponent],
     providers: [ViewOfJson],
 })
 export class ViewLogicalStream {          
-    public json : ILogicalReaderReturn[];
+    public json : Chromosome[];
     
     constructor(inputJson : ViewOfJson) {
         this.json = inputJson.json;

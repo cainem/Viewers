@@ -2,6 +2,6 @@ import {GenePairPositionDto} from "./genePairPositionDto"
 
 export interface ChromosomePositionDto
 {
-    positonInChromosome : number;
+    positionInChromosome : number;
     genePairPosition : GenePairPositionDto;
 }
