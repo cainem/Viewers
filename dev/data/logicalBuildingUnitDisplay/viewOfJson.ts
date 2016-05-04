@@ -48,7 +48,12 @@ export class ViewOfJson {
 	"typeOfLogicalBuildingUnit": "LogicalNode",
 	"logicalBuildingUnit": {
 		"logicalNodeFunctions": [],
-		"logicalImplicitConnectionSettings": null,
+		"logicalImplicitConnectionSettings": {
+			"createsAnImplicitConnection" : true,
+			"isConnectedToSearchNode" : true,
+			"associatedConstant" : 99,
+			"connectionFunctionType" : "identity"
+		},
 		"isSynchronising": false,
 		"key": {
 			"internalKey": 0,

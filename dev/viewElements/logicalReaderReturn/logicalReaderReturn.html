@@ -31,8 +31,7 @@
                 <logicalNode [model]="model.logicalBuildingUnit"></logicalNode>
             </div>
             <div class="container-fluid" *ngIf="model.typeOfLogicalBuildingUnit == 'LogicalConnection'">
-                Connection
-                <!--<logicalConnection></logicalConnection>-->
+                <logicalConnection [model]="model.logicalBuildingUnit"></logicalConnection>
             </div>
         </div>
     </div>

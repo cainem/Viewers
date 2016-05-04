@@ -1,5 +1,5 @@
 export interface LogicalImplicitConnectionSettingsDto {
-     createsAnImplictConnection : boolean;
+     createsAnImplicitConnection : boolean;
      isConnectedToSearchNode : boolean;
      associatedConstant : number;
      connectionFunctionType : string;
