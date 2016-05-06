@@ -82,6 +82,7 @@ export class ViewOfJson {
 	},
 	"foodUnitsUsed": 1
 },
+
 {
 	"typeOfLogicalBuildingUnit": "LogicalNode",
 	"logicalBuildingUnit": {
@@ -115,6 +116,7 @@ export class ViewOfJson {
 	},
 	"foodUnitsUsed": 1
 },
+
 {
 	"typeOfLogicalBuildingUnit": "LogicalConnection",
 	"logicalBuildingUnit": {
@@ -150,6 +152,7 @@ export class ViewOfJson {
 	},
 	"foodUnitsUsed": 1
 },
+
 {
 	"typeOfLogicalBuildingUnit": "LogicalNode",
 	"logicalBuildingUnit": {
@@ -211,8 +214,84 @@ export class ViewOfJson {
 		}
 	},
 	"foodUnitsUsed": 1
-}];
+},
+
+	{
+		"typeOfLogicalBuildingUnit": "LogicalJump",
+		"logicalBuildingUnit": {
+			"keySearchForward": false,
+			"keyToSearchFor": {
+				"internalKey": 0,
+				"keyLength": 3
+			},
+			"contextBasedActionSwitch" : {
+				"contextSwitchType" : "something",
+				"isUpperLimit" : true,
+				"contextLimit" : 99
+			}
+		},
+		"nextGenomePosition": {
+			"chromosomePositionInGenome": 0,
+			"chromosomePosition": {
+				"positionInChromosome": 0,
+				"genePairPosition": {
+					"isMother": true,
+					"genePosition": 3
+				}
+			}
+		},
+		"currentPositionInGenome": {
+			"chromosomePositionInGenome": 0,
+			"chromosomePosition": {
+				"positionInChromosome": 0,
+				"genePairPosition": {
+					"isMother": true,
+					"genePosition": 2
+				}
+			}
+		},
+		"foodUnitsUsed": 1
+	},
+
+	{
+		"typeOfLogicalBuildingUnit": "LogicalThreadControl",
+		"logicalBuildingUnit": {
+			"markThreadComplete": false,
+			"returnControlFoodLimit": 100,
+			"contextBasedActionSwitch" : {
+				"contextSwitchType" : "something",
+				"isUpperLimit" : true,
+				"contextLimit" : 99
+			}
+		},
+		"nextGenomePosition": {
+			"chromosomePositionInGenome": 0,
+			"chromosomePosition": {
+				"positionInChromosome": 0,
+				"genePairPosition": {
+					"isMother": true,
+					"genePosition": 3
+				}
+			}
+		},
+		"currentPositionInGenome": {
+			"chromosomePositionInGenome": 0,
+			"chromosomePosition": {
+				"positionInChromosome": 0,
+				"genePairPosition": {
+					"isMother": true,
+					"genePosition": 2
+				}
+			}
+		},
+		"foodUnitsUsed": 1
+	}  
+
+];
     }
     
+
     
+	
+	
 }

@@ -2,6 +2,8 @@ import {Component, Input} from 'angular2/core';
 import {ROUTER_DIRECTIVES, RouteConfig} from "angular2/router";
 import {LogicalNodeComponent} from '../logicalNode/logicalNode.component';
 import {LogicalConnectionComponent} from '../logicalConnection/logicalConnection.component';
+import {LogicalJumpComponent} from '../logicalJump/logicalJump.component';
+import {LogicalThreadControlComponent} from '../logicalThreadControl/logicalThreadControl.component';
 import {GenomePositionComponent} from '../genomePosition/genomePosition.component';
 import {ILogicalReaderReturn} from '../../data/logicalBuildingUnitDisplay/logicalReaderReturnDto';
 import {Collapse} from '../../sharedControls/collapsibleDiv/collapsibleDiv.component';
@@ -9,7 +11,8 @@ import {Collapse} from '../../sharedControls/collapsibleDiv/collapsibleDiv.compo
 @Component({
     selector: 'logicalReaderReturn',
     templateUrl: './dev/viewElements/logicalReaderReturn/logicalReaderReturn.html',
-    directives: [LogicalNodeComponent, LogicalConnectionComponent, GenomePositionComponent, Collapse],
+    directives: [LogicalNodeComponent, LogicalConnectionComponent, LogicalJumpComponent, LogicalThreadControlComponent,
+                 GenomePositionComponent, Collapse],
     providers : [],
     styleUrls: ['./dev/viewElements/logicalReaderReturn/logicalReaderReturn.css']
     

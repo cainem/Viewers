@@ -5,6 +5,6 @@ export interface LogicalConnectionDto {
     connectionFunctionType : string;
     isLocal : boolean;
     isConnectToSearchedForNode : boolean;
-    associatedConstant : boolean;
+    associatedConstant : number;
     searchRange : number;
 }
