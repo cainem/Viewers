@@ -8,8 +8,8 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "./app",
-    "sourceRoot": ""
+    "outDir": "./app"
+    //"sourceRoot": ""
   },
   "filesGlob": [
     "./dev/**/*.ts",

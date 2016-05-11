@@ -160,10 +160,10 @@
 	"currentPositionInGenome": {
 		"chromosomePositionInGenome": 0,
 		"chromosomePosition": {
-			"positionInChromosome": 0,
+			"positionInChromosome": 1,
 			"genePairPosition": {
 				"isMother": true,
-				"genePosition": 6
+				"genePosition": 0
 			}
 		}
 	},
@@ -197,10 +197,10 @@
 		"currentPositionInGenome": {
 			"chromosomePositionInGenome": 0,
 			"chromosomePosition": {
-				"positionInChromosome": 0,
+				"positionInChromosome": 1,
 				"genePairPosition": {
 					"isMother": true,
-					"genePosition": 2
+					"genePosition": 1
 				}
 			}
 		},

@@ -22,14 +22,18 @@ export class ViewOfJson {
 		let currentGene = new Gene(); 
 		for (let i = 0; i < allLogicalReaderReturns.length; i++) {
 			let currentChromosomeNumber = allLogicalReaderReturns[i].currentPositionInGenome.chromosomePositionInGenome;
+			let currentGeneNumber = allLogicalReaderReturns[i].currentPositionInGenome.chromosomePosition.positionInChromosome;
 			if (lastChromosomeNumber !== currentChromosomeNumber) {
+				// if the chromosome is changing then the gene certainly is
+				lastGeneNumber = currentGeneNumber;
+				currentChromosome.genes.push(currentGene);
+				currentGene = new Gene();
+											
 				chromosomes.push(currentChromosome);
 				lastChromosomeNumber = currentChromosomeNumber;
 				currentChromosome = new Chromosome();
-			}
-			
-			let currentGeneNumber = allLogicalReaderReturns[i].currentPositionInGenome.chromosomePosition.positionInChromosome;
-			if (lastGeneNumber !== currentGeneNumber) {
+			}			
+			else if (lastGeneNumber !== currentGeneNumber) {
 				lastGeneNumber = currentGeneNumber;
 				currentChromosome.genes.push(currentGene);
 				currentGene = new Gene();

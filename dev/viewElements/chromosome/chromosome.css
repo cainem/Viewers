@@ -3,4 +3,5 @@ div.chromosome {
     border-style: solid;
     background-color: lightpink;
     padding-bottom: 2px;
+    margin-bottom: 2px;
 }
