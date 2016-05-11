@@ -1,16 +1,18 @@
 import {ILogicalReaderReturn} from '../logicalBuildingUnitDisplay/logicalReaderReturnDto';
 import {Chromosome} from '../logicalBuildingUnitDisplay/chromosome';
 import {Gene} from '../logicalBuildingUnitDisplay/gene';
+import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 export class ViewOfJson {
-    contructor() {
-    }
+	private _rawJson : any;
 
-	get json(): Chromosome[] {
-		let allLogicalReaderReturns = this.rawJson;
+	@Output() rawJsonChanged : EventEmitter<Object> = new EventEmitter();
+
+	get jsonAsLogicalStream(): Chromosome[] {
+		let allLogicalReaderReturns = <ILogicalReaderReturn[]>this.rawJson;
 		let chromosomes : Chromosome[] = [];
 		
-		if (allLogicalReaderReturns.length === 0) {
+		if (!allLogicalReaderReturns || allLogicalReaderReturns.length === 0) {
 			return chromosomes;
 		}
 		
@@ -43,255 +45,11 @@ export class ViewOfJson {
 		return chromosomes;			
 	}
     			
-    get rawJson(): ILogicalReaderReturn[] {
-        return [{
-	"typeOfLogicalBuildingUnit": "LogicalNode",
-	"logicalBuildingUnit": {
-		"logicalNodeFunctions": [],
-		"logicalImplicitConnectionSettings": {
-			"createsAnImplicitConnection" : true,
-			"isConnectedToSearchNode" : true,
-			"associatedConstant" : 99,
-			"connectionFunctionType" : "identity"
-		},
-		"isSynchronising": false,
-		"key": {
-			"internalKey": 0,
-			"keyLength": 3
-		}
-	},
-	"nextGenomePosition": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 2
-			}
-		}
-	},
-	"currentPositionInGenome": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 1
-			}
-		}
-	},
-	"foodUnitsUsed": 1
-},
-
-{
-	"typeOfLogicalBuildingUnit": "LogicalNode",
-	"logicalBuildingUnit": {
-		"logicalNodeFunctions": [],
-		"logicalImplicitConnectionSettings": null,
-		"isSynchronising": false,
-		"key": {
-			"internalKey": 0,
-			"keyLength": 3
-		}
-	},
-	"nextGenomePosition": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 3
-			}
-		}
-	},
-	"currentPositionInGenome": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 2
-			}
-		}
-	},
-	"foodUnitsUsed": 1
-},
-
-{
-	"typeOfLogicalBuildingUnit": "LogicalConnection",
-	"logicalBuildingUnit": {
-		"keyToSearchFor": {
-			"internalKey": 0,
-			"keyLength": 2
-		},
-		"connectionFunctionType": "Identity",
-		"isLocal": false,
-		"isConnectToSearchedForNode": false,
-		"associatedConstant": 0.0,
-		"searchRange": 255
-	},
-	"nextGenomePosition": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 4
-			}
-		}
-	},
-	"currentPositionInGenome": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 3
-			}
-		}
-	},
-	"foodUnitsUsed": 1
-},
-
-{
-	"typeOfLogicalBuildingUnit": "LogicalNode",
-	"logicalBuildingUnit": {
-		"logicalNodeFunctions": [{
-			"functionType": "Identity",
-			"associatedConstant": 0.0
-		}],
-		"logicalImplicitConnectionSettings": null,
-		"isSynchronising": false,
-		"key": {
-			"internalKey": 0,
-			"keyLength": 3
-		}
-	},
-	"nextGenomePosition": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 6
-			}
-		}
-	},
-	"currentPositionInGenome": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 5
-			}
-		}
-	},
-	"foodUnitsUsed": 2
-},
-{
-	"typeOfLogicalBuildingUnit": "LogicalConnection",
-	"logicalBuildingUnit": {
-		"keyToSearchFor": {
-			"internalKey": 0,
-			"keyLength": 2
-		},
-		"connectionFunctionType": "Identity",
-		"isLocal": false,
-		"isConnectToSearchedForNode": false,
-		"associatedConstant": 0.0,
-		"searchRange": 255
-	},
-	"nextGenomePosition": null,
-	"currentPositionInGenome": {
-		"chromosomePositionInGenome": 0,
-		"chromosomePosition": {
-			"positionInChromosome": 0,
-			"genePairPosition": {
-				"isMother": true,
-				"genePosition": 6
-			}
-		}
-	},
-	"foodUnitsUsed": 1
-},
-
-	{
-		"typeOfLogicalBuildingUnit": "LogicalJump",
-		"logicalBuildingUnit": {
-			"keySearchForward": false,
-			"keyToSearchFor": {
-				"internalKey": 0,
-				"keyLength": 3
-			},
-			"contextBasedActionSwitch" : {
-				"contextSwitchType" : "something",
-				"isUpperLimit" : true,
-				"contextLimit" : 99
-			}
-		},
-		"nextGenomePosition": {
-			"chromosomePositionInGenome": 0,
-			"chromosomePosition": {
-				"positionInChromosome": 0,
-				"genePairPosition": {
-					"isMother": true,
-					"genePosition": 3
-				}
-			}
-		},
-		"currentPositionInGenome": {
-			"chromosomePositionInGenome": 0,
-			"chromosomePosition": {
-				"positionInChromosome": 0,
-				"genePairPosition": {
-					"isMother": true,
-					"genePosition": 2
-				}
-			}
-		},
-		"foodUnitsUsed": 1
-	},
-
-	{
-		"typeOfLogicalBuildingUnit": "LogicalThreadControl",
-		"logicalBuildingUnit": {
-			"markThreadComplete": false,
-			"returnControlFoodLimit": 100,
-			"contextBasedActionSwitch" : {
-				"contextSwitchType" : "something",
-				"isUpperLimit" : true,
-				"contextLimit" : 99
-			}
-		},
-		"nextGenomePosition": {
-			"chromosomePositionInGenome": 0,
-			"chromosomePosition": {
-				"positionInChromosome": 0,
-				"genePairPosition": {
-					"isMother": true,
-					"genePosition": 3
-				}
-			}
-		},
-		"currentPositionInGenome": {
-			"chromosomePositionInGenome": 0,
-			"chromosomePosition": {
-				"positionInChromosome": 0,
-				"genePairPosition": {
-					"isMother": true,
-					"genePosition": 2
-				}
-			}
-		},
-		"foodUnitsUsed": 1
-	}  
-
-];
+    get rawJson(): any {
+        return this._rawJson;
     }
-    
-
-    
-	
-	
+	set rawJson(value : any) {
+		this._rawJson = value;
+		this.rawJsonChanged.next(value);
+	}    	
 }

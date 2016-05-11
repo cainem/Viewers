@@ -7,7 +7,7 @@ import {LogicalConnectionDto} from '../../data/logicalBuildingUnitDisplay/logica
 
 @Component({
     selector: 'logicalConnection',
-    templateUrl: './app/viewElements/logicalConnection/logicalConnection.html',
+    templateUrl: './dev/viewElements/logicalConnection/logicalConnection.html',
     directives: [WoollyKey, Collapse],
     styleUrls: ['./dev/viewElements/logicalConnection/logicalConnection.css']
 })

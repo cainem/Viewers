@@ -8,14 +8,21 @@ import {Chromosome} from '../data/logicalBuildingUnitDisplay/chromosome';
 
 @Component({
     templateUrl: './dev/viewLogicalStream/viewLogicalStream.html',
-    directives: [ChromosomeComponent],
+    directives: [ChromosomeComponent, JsInputComponent],
     providers: [ViewOfJson],
 })
 export class ViewLogicalStream {          
     public json : Chromosome[];
+    private _viewOfJson : ViewOfJson;
+    private _onJsonChanged : () => void;
     
     constructor(inputJson : ViewOfJson) {
-        this.json = inputJson.json;
-    }
-      
+        this._viewOfJson = inputJson;
+        
+        this._onJsonChanged = () => {
+            this.json = this._viewOfJson.jsonAsLogicalStream;
+        }
+        
+        this._viewOfJson.rawJsonChanged.subscribe(this._onJsonChanged);
+    }         
 }
